@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
+
 export default function LoginPage() {
   const [isOn, setIsOn]             = useState(false);
   const [form, setForm]             = useState({ email: '', password: '' });
@@ -345,8 +346,13 @@ export default function LoginPage() {
               <label style={{ display:'flex', alignItems:'center', gap:6, fontSize:11.5, color:'#7a4c18', fontWeight:600, cursor:'pointer' }}>
                 <input type="checkbox" style={{ width:14, height:14, accentColor:'#d97706', cursor:'pointer' }}/> Remember me
               </label>
-              <a href="#" style={{ fontSize:11.5, color:'#b45309', fontWeight:700, textDecoration:'none' }}>Forgot password?</a>
-            </div>
+              <a 
+                href="/forgot-password" 
+                style={{ fontSize:11.5, color:'#b45309', fontWeight:700, textDecoration:'none' }}
+              >
+                Forgot password?
+              </a>
+             </div>
 
             {/* Login button */}
             <button type="submit" disabled={loading} className="lp-login-btn lp-btn-shine"
