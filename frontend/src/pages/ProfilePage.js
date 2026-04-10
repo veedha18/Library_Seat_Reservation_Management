@@ -32,13 +32,22 @@ export default function ProfilePage() {
   const avatarColor = avatarColors[(user?.name?.charCodeAt(0)||0) % avatarColors.length];
 
   const navBtnStyle = (active) => ({
-    display:'flex',alignItems:'center',gap:10,width:'100%',padding:'13px 24px',
-    fontSize:14,fontWeight:600,background:'none',border:'none',
-    color:active?'var(--gold)':'var(--text-muted)',cursor:'pointer',
-    textAlign:'left',fontFamily:'inherit',transition:'all 0.22s',
-    borderRight:active?'3px solid var(--gold)':'3px solid transparent',
-    background:active?'rgba(232,197,71,0.06)':'none',
-  });
+  display:'flex',
+  alignItems:'center',
+  gap:10,
+  width:'100%',
+  padding:'13px 24px',
+  fontSize:14,
+  fontWeight:600,
+  border:'none',
+  color:active?'var(--gold)':'var(--text-muted)',
+  cursor:'pointer',
+  textAlign:'left',
+  fontFamily:'inherit',
+  transition:'all 0.22s',
+  borderRight:active?'3px solid var(--gold)':'3px solid transparent',
+  background: active ? 'rgba(232,197,71,0.06)' : 'none', // ✅ only one background
+});
 
   return (
     <div className="page-wrapper">
