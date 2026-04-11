@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+console.log(process.env.REACT_APP_API_URL);
 
 
 export default function LoginPage() {
